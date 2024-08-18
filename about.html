@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/styles.css">
+    <title>ABOUT ME</title>
+    <style>
+   body {
+  color: black;
+}
+
+.bio-image {
+  width: 200px; 
+  height: 200px;
+  border: 3px solid orange;
+  border-radius: 50%; /* Optional: For a rounded image */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 1rem; /* Adjusted to provide spacing between grid items */
+  grid-template-areas: 
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem; /* Optional: Add some margin around the grid */
+}
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+  margin: auto; /* Centering content */
+}
+
+.job-1 {
+  grid-area: job1;
+}
+
+.job-2 {
+  grid-area: job2;
+}
+
+.job-3 {
+  grid-area: job3;
+}
+
+.job {
+  background-color: orange;
+  padding: 0.5rem;
+  border-bottom: 5px solid black;
+}
+
+@media (max-width: 1024px) {
+  .about-info {
+    grid-template-areas: 
+      "bioimage bio"
+      "job1 job2"
+      "job3 job3";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-info {
+    grid-template-areas: 
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  .bio {
+    font-size: 1.2rem;
+  }
+
+  .bio-image {
+    width: 150px; 
+    height: 150px;
+  }
+
+  .job {
+    padding: 0.3rem;
+  }
+}
+
+    </style>
+</head>
+<body class="about">
+    <header>
+        <div class="menu-btn" >
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <nav class="menu">
+        <div class="menu-branding">
+            <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+            <li class="nav-item" ><a href="./">HOME</a></li>
+            <li class="nav-item" ><a href="/about.html">ABOUT ME</a></li>
+            <li class="nav-item" ><a href="/work.html">MY WORK</a></li>
+            <li class="nav-item" ><a href="/contact.html">HOW TO REACH ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="home">
+        <h1 class="lg-heading"> About  <span class="b">Me. </span></h1>
+        <h2 class="sm-heading"> Let me tell you few things...</h2>
+        <div class="about-info">
+            
+            <div >
+                <h3>BIO</h3>
+                <P>
+                    
+                     I am a passionate and results-driven web developer with 5 years of experience in designing and building dynamic, user-centric websites and web applications. Specializing in  front-end development, I bring a blend of technical expertise and creative problem-solving to every project.
+                    
+                    With proficiency in HTML, CSS, JavaScript, React, Angular. Vue.js, Node.js,PHP(Laravel) e.t.c, I excel in creating seamless user experiences and robust, scalable solutions. My approach to web development is grounded in collaboration, attention to detail, and a commitment to delivering high-quality results that meet and exceed client expectations.
+    When I am not coding, you can find me reading or chatting. let’s connect and explore how I can contribute to your next web development project!
+            </P>
+            </div>
+        </div>
+          <div class=" job job-1">
+          <h3>WE DIG CREATIVITY</h3>
+          <h6>WORDPRESS DEVELOPER</h6>
+          <p>Designed user interfaces more than client expectation. </p>
+          </div>
+
+          <div class=" job job-2">
+            <h3>INTENTIONAL KEN ACADEMY</h3>
+            <h6>FRONT-END INSTRUCTOR</h6>
+            <p>Trained over 2000 students on coding with html, css, javascript and react.</p>
+          </div>
+
+          <div class=" job job-3">
+            <h3>MEDICAL RESERVE STATION</h3>
+            <h6>PHARMACIST</h6>
+            <p>implement patients' satisfaction and improving health-care facilities.</p>
+          </div>
+       
+
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> THE KENNETH AKINYELURE.</p>
+    </footer>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

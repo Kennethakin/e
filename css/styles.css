@@ -1,0 +1,291 @@
+html, body {
+  background-image: url("./Images/blog post 3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: orange;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.b {
+  color: #1aee72;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  font-size: 3.2rem;
+}
+
+h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  padding: 3rem 1.5rem;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Adds spacing between icons */
+  margin-top: 1rem;
+}
+
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  color: orange; /* Icon color */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.icons a:hover {
+  color: #1aee72; /* Change color on hover */
+}
+.icons {
+  position: relative;
+  z-index: 10; /* Higher value to ensure it’s clickable */
+}
+
+.icons a {
+  position: relative;
+  z-index: 20; /* Ensure each link is above other content */
+}
+
+
+/* Responsive adjustment for icon size */
+@media (max-width: 768px) {
+  .icons a {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons a {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: #1aee72;
+}
+
+main {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+main#home h1 {
+  margin-top: 20vh;
+}
+
+/* Basic styling for the menu button */
+.menu-btn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.btn-line {
+  background-color: orange;
+  height: 4px;
+  width: 30px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+
+.menu-btn:not(.close) .btn-line:nth-child(1) {
+  top: 10px;
+}
+
+.menu-btn:not(.close) .btn-line:nth-child(2) {
+  top: 18px;
+}
+
+.menu-btn:not(.close) .btn-line:nth-child(3) {
+  top: 26px;
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+  top: 18px;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 18px;
+}
+
+.menu {
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+}
+
+.menu-branding, .menu-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: rgb(47, 255, 217);
+  cursor: pointer;
+  list-style: circle;
+}
+
+.nav-item {
+  display: block;
+  padding: 10px;
+  color: orange;
+}
+
+.portrait {
+  width: 320px;
+  height: 320px;
+  background: url("./Images/Ken.jpg");
+  border-radius: 50%;
+  border: solid 3px black;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1aee72;
+  background-color: white;
+}
+
+.about {
+  overflow: auto;
+  min-height: 100vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 2.5rem;
+  }
+
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .btn-line {
+    width: 25px;
+  }
+
+  .portrait {
+    width: 250px;
+    height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .menu-nav {
+    width: 100%;
+    float: none;
+  }
+
+  .menu-nav .nav-item {
+    padding: 8px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  main#home h1 {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 1.8rem;
+  }
+
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .menu-btn {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn-line {
+    width: 20px;
+  }
+
+  .portrait {
+    width: 200px;
+    height: 200px;
+  }
+
+  .menu-nav {
+    padding: 0;
+  }
+
+  .nav-item {
+    padding: 6px;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  main#home h1 {
+    margin-top: 5vh;
+  }
+}
